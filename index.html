@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="/css/Style.css">
 </head>
 <body>
+    <div class="todo-container">  
+    <div class="input-section">
+        <input id="taskinput"  type="text" placeholder="Add a todo...."/>
+        <input id="dateinput" type="date"/>
+        <button id="addbutton">+</button>
+    </div>
+
+    <div class="search-container">
+        <div class="task-filter">
+        <div class="option-hidden" id="secret">
+            <input id="search-input" type="search" placeholder="Search tasks...."/>
+            <button id="btn-filter">FILTER</button>
+            <button onclick="filterStatus('all')">All</button>
+            <button onclick="filterStatus('pending')">Pending</button>
+            <button onclick="filterStatus('completed')">Completed</button>
+    </div>
+
+    <div class="sort-option-hidden" id="hidden">
+        <button id="btn-sort">SORT</button>
+        <button onclick="filterStatus('all')">All</button>
+            <button onclick="filterStatus('pending')">Pending</button>
+            <button onclick="filterStatus('completed')">Completed</button>
+            <button id="btn-delete">DELETE ALL</button>
+    </div>
     
+    <table>
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Dead Line</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="task-list">
+            <tr> <td colspan="4" style="text-align:center">No Tasks Found</td></tr>
+        </tbody>
+    </table>
+
+    <div Class="progres">
+        <div>Total Tasks: <span id="tasks-total">0</span></div>
+        <div>Pending: <span id="pending-total">0</span></div>
+        <div>Completed: <span id="completed-total">0</span></div>
+        <div>Progress: <span id="progress-total">0%</span></div>
+    </div>
+        </div>
+
+        <Script src="/Jss/scrift.js"></Script>
+
 </body>
 </html>
